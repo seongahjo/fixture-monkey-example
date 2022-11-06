@@ -16,6 +16,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Import GPG Key
+        uses: crazy-max/ghaction-import-gpg@v1
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
       - uses: actions/checkout@v3
       - name: Set up Java
         uses: actions/setup-java@v3
