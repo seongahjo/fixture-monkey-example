@@ -16,6 +16,7 @@ jobs:
   close:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Close milestone
         uses: Beakyn/gha-close-milestone@v1.1.1
         env:
@@ -23,7 +24,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
           milestone-title: ${{ github.ref_name }}
-      - uses: actions/checkout@v1
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
