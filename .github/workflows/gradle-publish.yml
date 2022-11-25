@@ -23,7 +23,6 @@ jobs:
         with:
           repository: ${{ github.repository }}
           milestone-title: ${{ github.ref_name }}
-      - uses: actions/checkout@v1
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
