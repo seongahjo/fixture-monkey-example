@@ -11,6 +11,7 @@ class OrderServiceTest {
 	private final OrderService sut = new OrderService();
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
+	// test
 	private final Order orderFixture = new Order(
 		1L,
 		"LINE FRIENDS",
